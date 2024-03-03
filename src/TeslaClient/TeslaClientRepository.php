@@ -18,6 +18,9 @@ class TeslaClientRepository
 return $code;
 PHP
         );
+        if (function_exists('opcache_reset')) {
+            opcache_reset();
+        }
     }
 
     public function load(): TeslaClient
