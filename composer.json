@@ -34,6 +34,7 @@
     "phpunit": "phpunit tests",
     "phpstan": "phpstan analyse routes public --level 6",
     "configure-app": "configure-app",
+    "add-route": "add-route",
     "post-create-project-cmd": "configure-app",
     "post-update-cmd": "configure-app",
     "dev": [
