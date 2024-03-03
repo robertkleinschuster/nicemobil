@@ -53,9 +53,8 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           key: ${{ secrets.SSH_KEY }}
-          tar_tmp_path: '/var/www/virtual/${{ secrets.SSH_USER }}/deploy_temp'
           source: "src/*,routes/*,public/*,vendor/*,config.php,!tests/**,!vendor/*/*/tests,!vendor/*/*/test"
-          target: "/var/www/virtual/${{ secrets.SSH_USER }}/deploy_target"
+          target: "/var/www/virtual/${{ secrets.SSH_USER }}/nicemobil"
           rm: true
 
       - name: Call post deploy endpoint
