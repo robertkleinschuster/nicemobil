@@ -8,14 +8,11 @@ use Robs\Component\Renderer\Renderer;
 
 return fn($children, Renderer $renderer, array $params, array $queryParams) => new Document(
     lang: 'de',
-    children: [
-        $renderer->fragment('<h1>Welcome to your new app</h1>'),
-        $children
-    ],
+    children: $children,
     dependencies: new Dependencies(
-        scripts: [],
-        stylesheets: ['/styles.css']
+        scripts: ['/leaflet/leaflet.js', '/live.js'],
+        stylesheets: ['/simple.min.css', '/leaflet/leaflet.css', '/styles.css']
     ),
-    title: 'New app',
-    description: 'This is a new app.',
+    title: 'Live - NICEmobil',
+    description: 'Das NICEmobil von Franz Liebmann online verfolgen.',
 );

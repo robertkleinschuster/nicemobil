@@ -14,7 +14,9 @@
   ],
   "require": {
     "php": "^8.2",
-    "robertkleinschuster/component-app": "v0.0.1"
+    "guzzlehttp/guzzle": "^7.5.0",
+    "robertkleinschuster/component-app": "v0.0.1",
+    "ext-curl": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "11.0.4",
