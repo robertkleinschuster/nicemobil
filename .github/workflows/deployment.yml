@@ -1,0 +1,62 @@
+name: Deployment pipeline
+
+env:
+  APP_CONFIG_ENVIRONMENT: 'production'
+  APP_CONFIG_DEPLOY_KEY: ${{ secrets.deploy_key }}
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Install dependencies
+        run: composer install
+
+      - name: PHP Stan
+        run: composer phpstan
+  deployment:
+    needs: test
+    runs-on: ubuntu-22.04
+    environment:
+      name: production
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Install dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Configure routes
+        run: composer configure-routes
+
+      - name: Upload
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          key: ${{ secrets.SSH_KEY }}
+          tar_tmp_path: '/var/www/virtual/${{ secrets.SSH_USER }}/deploy_temp'
+          source: "src/*,routes/*,public/*,vendor/*,config.php,!tests/**,!vendor/*/*/tests,!vendor/*/*/test"
+          target: "/var/www/virtual/${{ secrets.SSH_USER }}/deploy_target"
+          rm: true
+
+      - name: Call post deploy endpoint
+        run: "curl --fail-with-body -X POST -H \"Cache-Control: no-cache\" -H \"Authorization: ${{ secrets.deploy_key }}\" https://${{ secrets.domain }}/.deploy"

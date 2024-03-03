@@ -1,0 +1,44 @@
+{
+
+  "name": "robertkleinschuster/template",
+  "description": "Template for component oriented applications.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Robert Kleinschuster",
+      "email": "composer@robs.social",
+      "homepage": "https://www.robs.social",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "robertkleinschuster/component-app": "v0.0.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "11.0.4",
+    "phpstan/phpstan": "1.10.59"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AppTest\\": "tests"
+    }
+  },
+  "scripts": {
+    "phpunit": "phpunit tests",
+    "phpstan": "phpstan analyse routes public --level 6",
+    "configure-app": "configure-app",
+    "post-create-project-cmd": "configure-app",
+    "post-update-cmd": "configure-app",
+    "dev": [
+      "Composer\\Config::disableProcessTimeout",
+      "php -S localhost:8080 -t public cli-router.php"
+    ]
+  }
+}

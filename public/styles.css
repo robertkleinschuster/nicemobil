@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --bg: #2c2c2c;
+    --txt: #d0d0d0;
+    --border: #777777;
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--txt);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+section {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a {
+    color: var(--txt);
+}
+
+a:visited {
+    color: var(--txt);
+}
+
+a:hover {
+    filter: brightness(1.4);
+}
+
