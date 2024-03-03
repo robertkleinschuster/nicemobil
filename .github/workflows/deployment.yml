@@ -43,8 +43,8 @@ jobs:
       - name: Install dependencies
         run: composer install --no-dev --optimize-autoloader
 
-      - name: Configure routes
-        run: composer configure-routes
+      - name: Configure app
+        run: composer configure-app
 
       - name: Upload
         uses: appleboy/scp-action@v0.1.7
