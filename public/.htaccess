@@ -6,6 +6,4 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule . /index.php [L]
-    RewriteCond %{HTTP_HOST} !^www.robs.social
-    RewriteRule (.*) https://www.robs.social/$1 [R=301,L]
 </IfModule>
