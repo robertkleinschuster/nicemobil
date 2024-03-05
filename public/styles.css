@@ -11,6 +11,7 @@ nicemobil-live > p {
 
 table {
     display: table;
+    width: 100%;
 }
 
 table svg {
