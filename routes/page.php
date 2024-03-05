@@ -6,7 +6,10 @@ use App\TeslaClient\LiveModel;
 use App\TeslaClient\TeslaClientRepository;
 use Mosaic\Fragment;
 
-return function (\Zenith\AppConfig $config) {
+return #[\Compass\Lazy(loading: new Fragment(<<<HTML
+<h1>NICEmobil</h1>
+HTML
+))] function (\Zenith\AppConfig $config) {
     $repo = new TeslaClientRepository($config);
     $client = $repo->load();
     if ($client->getVehicleId() && $client->getIdToken()) {
