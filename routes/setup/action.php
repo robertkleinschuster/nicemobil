@@ -6,8 +6,8 @@ use App\TeslaClient\TeslaClientRepository;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-return function (ServerRequestInterface $request, ResponseInterface $response, array $parsedBody) {
-    $repo = new TeslaClientRepository();
+return function (\Zenith\AppConfig $config, ServerRequestInterface $request, ResponseInterface $response, array $parsedBody) {
+    $repo = new TeslaClientRepository($config);
     $client = $repo->load();
     if (isset($parsedBody['vehicle'])) {
         $client->setVehicleId($parsedBody['vehicle']);

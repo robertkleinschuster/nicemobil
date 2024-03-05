@@ -3,6 +3,7 @@ name: Deployment pipeline
 env:
   APP_CONFIG_ENVIRONMENT: 'production'
   APP_CONFIG_DEPLOY_KEY: ${{ secrets.deploy_key }}
+  APP_CONFIG_DATA_DIR: '/var/www/virtual/lipo/nicemobil_data'
 
 on:
   push:

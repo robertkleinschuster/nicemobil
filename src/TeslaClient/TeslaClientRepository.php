@@ -4,14 +4,23 @@ declare(strict_types=1);
 
 namespace App\TeslaClient;
 
+use Zenith\AppConfig;
+
 class TeslaClientRepository
 {
+    private ?string $dataDir;
+
+    public function __construct(AppConfig $config)
+    {
+        $this->dataDir = $config->get('data_dir');
+    }
+
     public function save(TeslaClient $client): void
     {
         $code = var_export($client, true);
 
         file_put_contents(
-            'client.php',
+            $this->dataDir . DIRECTORY_SEPARATOR . 'client.php',
             <<<PHP
 <?php
 
@@ -25,7 +34,7 @@ PHP
 
     public function load(): TeslaClient
     {
-        $client = @include 'client.php';
+        $client = @include $this->dataDir . DIRECTORY_SEPARATOR . 'client.php';
         if (!$client) {
             return new TeslaClient();
         }

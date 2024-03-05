@@ -9,8 +9,8 @@ use Zenith\Components\InputGroup;
 use Zenith\Plugin\Url;
 use Mosaic\Fragment;
 
-return function () {
-    $repo = new TeslaClientRepository();
+return function (\Zenith\AppConfig $config) {
+    $repo = new TeslaClientRepository($config);
     $client = $repo->load();
 
     if ($client->isRedirected()) {

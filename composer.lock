@@ -957,12 +957,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robertkleinschuster/zenith.git",
-                "reference": "8c68bbdbab94812731dbbedfa5abe936af25012d"
+                "reference": "3b6400bf530f8bc0d5a84c9ed0de1ecf2b3ad94f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robertkleinschuster/zenith/zipball/8c68bbdbab94812731dbbedfa5abe936af25012d",
-                "reference": "8c68bbdbab94812731dbbedfa5abe936af25012d",
+                "url": "https://api.github.com/repos/robertkleinschuster/zenith/zipball/3b6400bf530f8bc0d5a84c9ed0de1ecf2b3ad94f",
+                "reference": "3b6400bf530f8bc0d5a84c9ed0de1ecf2b3ad94f",
                 "shasum": ""
             },
             "require": {
@@ -1003,7 +1003,7 @@
                 "issues": "https://github.com/robertkleinschuster/zenith/issues",
                 "source": "https://github.com/robertkleinschuster/zenith/tree/v0.0.1"
             },
-            "time": "2024-03-05T14:41:19+00:00"
+            "time": "2024-03-05T20:05:09+00:00"
         },
         {
             "name": "slim/psr7",

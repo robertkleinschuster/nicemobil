@@ -6,8 +6,8 @@ use App\TeslaClient\LiveModel;
 use App\TeslaClient\TeslaClientRepository;
 use Mosaic\Fragment;
 
-return function () {
-    $repo = new TeslaClientRepository();
+return function (\Zenith\AppConfig $config) {
+    $repo = new TeslaClientRepository($config);
     $client = $repo->load();
     if ($client->getVehicleId() && $client->getIdToken()) {
         $vehicleData = $client->getVehicleData($client->getVehicleId());

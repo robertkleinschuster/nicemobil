@@ -8,6 +8,7 @@ use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Uri;
 use GuzzleHttp\RequestOptions;
+use Zenith\AppConfig;
 
 final class TeslaClient
 {
@@ -120,7 +121,6 @@ final class TeslaClient
             $this->expires_in = $responseData['expires_in'];
             $this->token_type = $responseData['token_type'];
             $this->expires = time() + $this->expires_in;
-            (new TeslaClientRepository())->save($this);
             return $responseData;
         }
         throw new TeslaClientException('Unable to refresh access_token');
