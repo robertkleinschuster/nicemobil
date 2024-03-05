@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Robs\Component\App\BootstrapFactory;
+use Zenith\BootstrapFactory;
 
 chdir(dirname(__DIR__));
 

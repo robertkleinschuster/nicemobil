@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Robs\Component\App\Components\Dependencies;
-use Robs\Component\App\Components\Document;
-use Robs\Component\Renderer\Renderer;
+use Zenith\Components\Dependencies;
+use Zenith\Components\Document;
+use Mosaic\Renderer;
 
 return fn($children, Renderer $renderer, array $params, array $queryParams) => new Document(
     lang: 'de',

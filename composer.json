@@ -15,7 +15,7 @@
   "require": {
     "php": "^8.2",
     "guzzlehttp/guzzle": "^7.5.0",
-    "robertkleinschuster/component-app": "v0.0.1",
+    "robertkleinschuster/zenith": "v0.0.1",
     "ext-curl": "*"
   },
   "require-dev": {

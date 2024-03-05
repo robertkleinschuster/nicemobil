@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use App\TeslaClient\LiveModel;
 use App\TeslaClient\TeslaClientRepository;
-use Robs\Component\Renderer\Fragment;
+use Mosaic\Fragment;
 
 return function () {
     $repo = new TeslaClientRepository();

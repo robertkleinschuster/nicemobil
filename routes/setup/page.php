@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 use App\TeslaClient\TeslaClientRepository;
-use Robs\Component\App\Components\Button;
-use Robs\Component\App\Components\Form;
-use Robs\Component\App\Components\InputGroup;
-use Robs\Component\App\Plugin\Url;
-use Robs\Component\Renderer\Fragment;
+use Zenith\Components\Button;
+use Zenith\Components\Form;
+use Zenith\Components\InputGroup;
+use Zenith\Plugin\Url;
+use Mosaic\Fragment;
 
 return function () {
     $repo = new TeslaClientRepository();
