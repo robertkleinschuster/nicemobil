@@ -54,7 +54,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           key: ${{ secrets.SSH_KEY }}
-          source: "src/*,routes/*,public/*,vendor/*,config.php,!tests/**,!vendor/*/*/tests,!vendor/*/*/test"
+          source: "components/*,src/*,routes/*,public/*,vendor/*,config.php,!tests/**,!vendor/*/*/tests,!vendor/*/*/test"
           target: "/var/www/virtual/${{ secrets.SSH_USER }}/nicemobil"
           rm: true
 
