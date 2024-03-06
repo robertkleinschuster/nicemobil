@@ -3,6 +3,12 @@ body > header {
     padding: 0;
 }
 
+.loading {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
 nicemobil-live > p {
     display: flex;
     justify-content: space-between;
@@ -107,6 +113,9 @@ table svg {
 .icon {
     flex: 33%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 .icon svg {

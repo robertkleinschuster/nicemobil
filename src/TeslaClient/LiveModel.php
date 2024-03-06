@@ -44,8 +44,11 @@ class LiveModel
         return $model;
     }
 
-    private function formatNumber(float|int $number, string $unit, int $decimals = 0): string
+    private function formatNumber(null|float|int $number, string $unit, int $decimals = 0): string
     {
+        if ($number === null) {
+            return 'n/v';
+        }
         return number_format($number, $decimals, ',', ' ') . ' ' . $unit;
     }
 

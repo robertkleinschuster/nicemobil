@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 use App\TeslaClient\LiveModel;
 use App\TeslaClient\TeslaClientRepository;
-use Mosaic\Fragment;
+use Compass\Lazy;
+use Mosaic\Helper\IncludeFile;
+use Mosaic\Renderer;
+use Zenith\AppConfig;
 
-return #[\Compass\Lazy(loading: new Fragment(<<<HTML
-<h1>NICEmobil</h1>
-HTML
-))] function (\Zenith\AppConfig $config) {
+return #[Lazy(loading: new IncludeFile('components/loading.php'))] function (AppConfig $config, Renderer $renderer) {
     $repo = new TeslaClientRepository($config);
     $client = $repo->load();
     if ($client->getVehicleId() && $client->getIdToken()) {
@@ -33,11 +33,22 @@ HTML
             'chargeRate' => $model->getChargeRate(),
         ];
 
-        extract($data);
-        ob_start();
-        include "live.phtml";
-        yield new Fragment(ob_get_clean());
+        if ($model->isOnline()) {
+            yield $renderer->args($data) => require "components/icons.php";
+            yield $renderer->fragment(<<<HTML
+<nicemobil-live data-lat="{$model->getLatitude()}"
+      data-lng="{$model->getLongitude()}">
+   {$renderer->render(require "components/battery.php", $renderer->args($data))}
+   <div id="map"></div>
+   {$renderer->render(require "components/table.php", $renderer->args($data))}
+
+</nicemobil-live>
+HTML
+);
+        } else {
+            yield require "components/offline.php";
+        }
     } else {
-        yield 'Not logged in';
+        yield require "components/offline.php";
     }
 };

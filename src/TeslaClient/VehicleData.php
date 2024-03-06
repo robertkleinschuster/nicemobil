@@ -16,8 +16,8 @@ final class VehicleData
     private float $longitude = 0;
     private int $speed = 0;
     private int $power = 0;
-    private float $outsideTemp = 0;
-    private float $insideTemp = 0;
+    private ?float $outsideTemp = null;
+    private ?float $insideTemp = null;
     private bool $fastChargerPresent = false;
     private string $fastChargerType = '';
     private string $chargingState = '';
@@ -141,7 +141,7 @@ final class VehicleData
     /**
      * @return float|int
      */
-    public function getOutsideTemp(): float|int
+    public function getOutsideTemp(): null|float|int
     {
         return $this->outsideTemp;
     }
@@ -149,7 +149,7 @@ final class VehicleData
     /**
      * @return float|int
      */
-    public function getInsideTemp(): float|int
+    public function getInsideTemp(): null|float|int
     {
         return $this->insideTemp;
     }
