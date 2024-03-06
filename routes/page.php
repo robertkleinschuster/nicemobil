@@ -34,21 +34,21 @@ return #[Lazy(loading: new Loading())] function (AppConfig $config, Renderer $re
         ];
 
         if ($model->isOnline()) {
-            yield $renderer->args($data) => require "components/icons.php";
+            yield $renderer->args($data) => require  dirname(__DIR__) . "/components/icons.php";
             yield $renderer->fragment(<<<HTML
 <nicemobil-live data-lat="{$model->getLatitude()}"
       data-lng="{$model->getLongitude()}">
-   {$renderer->render(require "components/battery.php", $renderer->args($data))}
+   {$renderer->render(require  dirname(__DIR__) . "/components/battery.php", $renderer->args($data))}
    <div id="map"></div>
-   {$renderer->render(require "components/table.php", $renderer->args($data))}
+   {$renderer->render(require  dirname(__DIR__) . "/components/table.php", $renderer->args($data))}
 
 </nicemobil-live>
 HTML
 );
         } else {
-            yield require "components/offline.php";
+            yield require  dirname(__DIR__) . "/components/offline.php";
         }
     } else {
-        yield require "components/offline.php";
+        yield require  dirname(__DIR__) . "/components/offline.php";
     }
 };
