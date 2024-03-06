@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
+use App\Loading;
 use App\TeslaClient\LiveModel;
 use App\TeslaClient\TeslaClientRepository;
 use Compass\Lazy;
-use Mosaic\Helper\IncludeFile;
 use Mosaic\Renderer;
 use Zenith\AppConfig;
 
-return #[Lazy(loading: new IncludeFile(__DIR__ . '/../components/loading.php'))] function (AppConfig $config, Renderer $renderer) {
+return #[Lazy(loading: new Loading())] function (AppConfig $config, Renderer $renderer) {
     $repo = new TeslaClientRepository($config);
     $client = $repo->load();
     if ($client->getVehicleId() && $client->getIdToken()) {

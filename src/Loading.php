@@ -2,7 +2,16 @@
 
 declare(strict_types=1);
 
-return fn(\Mosaic\Renderer $renderer) => $renderer->fragment(<<<HTML
+namespace App;
+
+use Mosaic\Renderable;
+use Mosaic\Renderer;
+
+class Loading implements Renderable
+{
+    public function render(Renderer $renderer, mixed $data = null): iterable
+    {
+        return $renderer->fragment(<<<HTML
 <style>
 
 .lds-grid {
@@ -78,4 +87,6 @@ return fn(\Mosaic\Renderer $renderer) => $renderer->fragment(<<<HTML
 </div>
 <p style="text-align: center">wird geladen...</p>
 HTML
-);
+        );
+    }
+}
