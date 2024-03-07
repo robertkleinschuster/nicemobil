@@ -9,7 +9,7 @@ use Mosaic\Renderer;
 
 class Loading implements Renderable
 {
-    public function render(Renderer $renderer, mixed $data = null): iterable
+    public function render(Renderer $renderer, mixed $data)
     {
         return $renderer->fragment(<<<HTML
 <style>

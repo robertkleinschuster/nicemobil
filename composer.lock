@@ -863,12 +863,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robertkleinschuster/compass.git",
-                "reference": "16267d35676074a3696b564a6ef4fcb309564979"
+                "reference": "69f4c653c2714d2c43e2a02dbb6303dcc6ec0182"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robertkleinschuster/compass/zipball/16267d35676074a3696b564a6ef4fcb309564979",
-                "reference": "16267d35676074a3696b564a6ef4fcb309564979",
+                "url": "https://api.github.com/repos/robertkleinschuster/compass/zipball/69f4c653c2714d2c43e2a02dbb6303dcc6ec0182",
+                "reference": "69f4c653c2714d2c43e2a02dbb6303dcc6ec0182",
                 "shasum": ""
             },
             "require": {
@@ -902,7 +902,7 @@
                 "issues": "https://github.com/robertkleinschuster/compass/issues",
                 "source": "https://github.com/robertkleinschuster/compass/tree/v0.0.1"
             },
-            "time": "2024-03-05T14:39:19+00:00"
+            "time": "2024-03-07T19:29:56+00:00"
         },
         {
             "name": "robertkleinschuster/mosaic",
@@ -910,12 +910,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robertkleinschuster/mosaic.git",
-                "reference": "5b6fa92943f579e78a120de6f3f4e4a0a773722b"
+                "reference": "22793727302e22c9479cd9f5638d0b43e122723f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robertkleinschuster/mosaic/zipball/5b6fa92943f579e78a120de6f3f4e4a0a773722b",
-                "reference": "5b6fa92943f579e78a120de6f3f4e4a0a773722b",
+                "url": "https://api.github.com/repos/robertkleinschuster/mosaic/zipball/22793727302e22c9479cd9f5638d0b43e122723f",
+                "reference": "22793727302e22c9479cd9f5638d0b43e122723f",
                 "shasum": ""
             },
             "require": {
@@ -949,7 +949,7 @@
                 "issues": "https://github.com/robertkleinschuster/mosaic/issues",
                 "source": "https://github.com/robertkleinschuster/mosaic/tree/v0.0.1"
             },
-            "time": "2024-03-05T14:37:02+00:00"
+            "time": "2024-03-07T18:11:48+00:00"
         },
         {
             "name": "robertkleinschuster/zenith",
@@ -957,12 +957,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robertkleinschuster/zenith.git",
-                "reference": "3b6400bf530f8bc0d5a84c9ed0de1ecf2b3ad94f"
+                "reference": "cd3451bc214c10be6a57f56177b4a43675099f9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robertkleinschuster/zenith/zipball/3b6400bf530f8bc0d5a84c9ed0de1ecf2b3ad94f",
-                "reference": "3b6400bf530f8bc0d5a84c9ed0de1ecf2b3ad94f",
+                "url": "https://api.github.com/repos/robertkleinschuster/zenith/zipball/cd3451bc214c10be6a57f56177b4a43675099f9c",
+                "reference": "cd3451bc214c10be6a57f56177b4a43675099f9c",
                 "shasum": ""
             },
             "require": {
@@ -1003,7 +1003,7 @@
                 "issues": "https://github.com/robertkleinschuster/zenith/issues",
                 "source": "https://github.com/robertkleinschuster/zenith/tree/v0.0.1"
             },
-            "time": "2024-03-05T20:05:09+00:00"
+            "time": "2024-03-07T19:34:55+00:00"
         },
         {
             "name": "slim/psr7",
@@ -1412,16 +1412,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.0.1",
+            "version": "v5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "2218c2252c874a4624ab2f613d86ac32d227bc69"
+                "reference": "139676794dc1e9231bf7bcd123cfc0c99182cb13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/2218c2252c874a4624ab2f613d86ac32d227bc69",
-                "reference": "2218c2252c874a4624ab2f613d86ac32d227bc69",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/139676794dc1e9231bf7bcd123cfc0c99182cb13",
+                "reference": "139676794dc1e9231bf7bcd123cfc0c99182cb13",
                 "shasum": ""
             },
             "require": {
@@ -1464,9 +1464,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.0.1"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.0.2"
             },
-            "time": "2024-02-21T19:24:10+00:00"
+            "time": "2024-03-05T20:51:40+00:00"
         },
         {
             "name": "phar-io/manifest",
