@@ -3,13 +3,14 @@
 declare(strict_types=1);
 
 use App\TeslaClient\TeslaClientRepository;
+use Zenith\AppConfig;
 use Zenith\Components\Button;
 use Zenith\Components\Form;
 use Zenith\Components\InputGroup;
 use Zenith\Plugin\Url;
 use Mosaic\Fragment;
 
-return function (\Zenith\AppConfig $config) {
+return function (AppConfig $config) {
     $repo = new TeslaClientRepository($config);
     $client = $repo->load();
 

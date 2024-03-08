@@ -863,12 +863,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robertkleinschuster/compass.git",
-                "reference": "69f4c653c2714d2c43e2a02dbb6303dcc6ec0182"
+                "reference": "f21b8245538b71d9890ba9c6c2e9e89a1ad18078"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robertkleinschuster/compass/zipball/69f4c653c2714d2c43e2a02dbb6303dcc6ec0182",
-                "reference": "69f4c653c2714d2c43e2a02dbb6303dcc6ec0182",
+                "url": "https://api.github.com/repos/robertkleinschuster/compass/zipball/f21b8245538b71d9890ba9c6c2e9e89a1ad18078",
+                "reference": "f21b8245538b71d9890ba9c6c2e9e89a1ad18078",
                 "shasum": ""
             },
             "require": {
@@ -902,7 +902,7 @@
                 "issues": "https://github.com/robertkleinschuster/compass/issues",
                 "source": "https://github.com/robertkleinschuster/compass/tree/v0.0.1"
             },
-            "time": "2024-03-07T19:29:56+00:00"
+            "time": "2024-03-08T12:41:27+00:00"
         },
         {
             "name": "robertkleinschuster/mosaic",
@@ -957,12 +957,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robertkleinschuster/zenith.git",
-                "reference": "cd3451bc214c10be6a57f56177b4a43675099f9c"
+                "reference": "f836f4d1167b2f1a87548057e9aa27eeccaabcff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robertkleinschuster/zenith/zipball/cd3451bc214c10be6a57f56177b4a43675099f9c",
-                "reference": "cd3451bc214c10be6a57f56177b4a43675099f9c",
+                "url": "https://api.github.com/repos/robertkleinschuster/zenith/zipball/f836f4d1167b2f1a87548057e9aa27eeccaabcff",
+                "reference": "f836f4d1167b2f1a87548057e9aa27eeccaabcff",
                 "shasum": ""
             },
             "require": {
@@ -1003,7 +1003,7 @@
                 "issues": "https://github.com/robertkleinschuster/zenith/issues",
                 "source": "https://github.com/robertkleinschuster/zenith/tree/v0.0.1"
             },
-            "time": "2024-03-07T19:34:55+00:00"
+            "time": "2024-03-08T12:46:43+00:00"
         },
         {
             "name": "slim/psr7",

@@ -38,7 +38,6 @@
     "configure-app": "configure-app",
     "add-route": "add-route",
     "post-create-project-cmd": "configure-app",
-    "post-update-cmd": "configure-app",
     "dev": [
       "Composer\\Config::disableProcessTimeout",
       "php -S localhost:8080 -t public cli-router.php"
